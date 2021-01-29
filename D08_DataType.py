@@ -17,10 +17,21 @@ big_array['rank'] = rank_list
 big_array['myopia'] = myopia_list
 
 print(big_array)
+#[('小明', 'boy', 67.5, 8,  True) ('小華', 'boy', 75.3, 1,  True)
+# ('小菁', 'girl', 50.1, 5, False) ('小美', 'girl', 45.5, 4, False)
+# ('小張', 'boy', 80.8, 7,  True) ('John', 'boy', 90.4, 6,  True)
+# ('Mark', 'boy', 78.4, 2, False) ('Tom', 'boy', 70.7, 3, False)]
 
 
 #2. 呈上題，將array中體重(weight)數據集取出算出全部平均體重
+np.mean(big_array['weight'])
+#69.8375
 
 #3. 呈上題，進一步算出男生(sex欄位是boy)平均體重
+np.mean(big_array[big_array['sex']=='boy']['weight'])
+#77.18333
+
 
 #4. 呈上題，進一步算出女生(sex欄位是girl)平均體重
+np.mean(big_array[big_array['sex']=='girl']['weight'])
+#47.8
