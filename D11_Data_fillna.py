@@ -28,8 +28,8 @@ q_df['Sex_label'] = LabelEncoder().fit_transform(q_df['Sex'])
 getDummies = pd.get_dummies(q_df['Profession']) #Profession使用一般性
 pd.concat([q_df, getDummies], axis=1)
 
-#   Sex	    Profession	Sex_label	None	engineer	teacher
-#0	male	  teacher	    1	        0	    0	        1
-#1	male	  engineer	  1	        0	    1	        0
-#2	female	None	      0	        1	    0	        0
-#3	female	engineer	  0	        0	    1	        0
+#	Sex	Profession	Sex_label	None	engineer	teacher
+#0	male	teacher	1	0	0	1
+#1	male	engineer	1	0	1	0
+#2	female	None	0	1	0	0
+#3	female	engineer	0	0	1	0
