@@ -17,6 +17,8 @@ q_df.fillna("others")
 #2	female	None   ----> 沒有被取代成"others"
 #3	female	enginee
 
+#改用 q_df['Profession'].replace('None', "others", inplace=True)
+
 
 #更進一步將字串做編碼。 此時用什麼方式做編碼比較適合?為什麼?
 
